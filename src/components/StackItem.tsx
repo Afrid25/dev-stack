@@ -10,9 +10,12 @@ interface StackItemProps {
 const StackItem = ({ tech, Icon, onRemove }: StackItemProps) => {
     return (
         <li className="flex items-center justify-between rounded-lg border border-slate-100 bg-slate-50 p-2.5">
-            <div className="flex items-center gap-2">
+            <div className="flex min-w-0 items-center gap-2">
                 {Icon && <Icon className={`text-base ${tech.iconColor}`} />}
-                <span className="text-xs font-semibold text-slate-800">{tech.name}</span>
+                <div className="min-w-0">
+                    <p className="truncate text-xs font-semibold text-slate-800">{tech.name}</p>
+                    <p className="text-[10px] text-slate-500">{tech.category}</p>
+                </div>
             </div>
             <button
                 type="button"

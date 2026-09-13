@@ -62,14 +62,15 @@ const TechnologyCard = ({ tech, isSelected, onToggle }: TechnologyCardProps) => 
         <button
           type="button"
           aria-pressed={isSelected}
+          disabled={isSelected}
           onClick={() => onToggle(tech)}
           className={`w-full rounded-lg py-2 text-[10px] font-semibold leading-tight transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 sm:rounded-xl sm:py-2.5 sm:text-xs ${
             isSelected
-              ? "border border-rose-200 bg-rose-50 text-rose-600 hover:bg-rose-100"
+              ? "cursor-not-allowed border border-emerald-200 bg-emerald-50 text-emerald-700"
               : "bg-slate-950 text-white hover:bg-slate-800"
           }`}
         >
-          {isSelected ? "Remove from Stack" : "Add to Stack"}
+          {isSelected ? "Added to Stack" : "Add to Stack"}
         </button>
       </div>
     </article>

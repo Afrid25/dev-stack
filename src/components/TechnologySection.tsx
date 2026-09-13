@@ -4,9 +4,20 @@ import StackSideBar from "./StackSideBar";
 import TechnologyCard from "./TechnologyCard";
 import toast from 'react-hot-toast'
 
+export const TechnologyFallback = () => {
+  return (
+    <section className="bg-slate-50/50 px-4 py-16 sm:px-6 lg:px-8" aria-label="Loading technologies">
+      <div className="mx-auto flex min-h-64 max-w-6xl items-center justify-center">
+        <p className="animate-pulse text-sm font-medium text-slate-500">Loading technologies...</p>
+      </div>
+    </section>
+  )
+}
+
 const TechnologySection = () => {
   const [technologies, setTechnologies] = useState<Technology[]>([]);
   const [selectedStack, setSelectedStack] = useState<Technology[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -23,9 +34,11 @@ const TechnologySection = () => {
 
         const data: Technology[] = await response.json();
         setTechnologies(data);
+        setIsLoading(false);
       } catch (error) {
         if (!controller.signal.aborted) {
           console.error("Failed to load technology data:", error);
+          setIsLoading(false);
         }
       }
     };
@@ -67,6 +80,10 @@ const TechnologySection = () => {
     toast.success('All technologies removed from your stack')
   }
 
+  if (isLoading) {
+    return <TechnologyFallback />
+  }
+
   return (
     <section
       id="technology"
@@ -86,7 +103,7 @@ const TechnologySection = () => {
         </header>
 
         <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[1fr_280px]">
-          <div className="grid min-w-0 grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3">
+          <div className="grid min-w-0 grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {technologies.map((tech) => (
               <TechnologyCard
                 key={tech.id}
