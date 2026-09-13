@@ -10,10 +10,12 @@ const Hero = () => {
         <div className="mx-auto w-full min-w-0 max-w-lg text-center lg:mx-0 lg:text-left">
           <h1 className="max-w-full wrap-break-word text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-3xl lg:text-4xl">
             Build Your Ideal{" "}
-            <span className="inline bg-linear-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
-              Development Stack
-            </span>
           </h1>
+        <h1 className="max-w-full wrap-break-word text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-3xl lg:text-4xl">
+            <span className="inline bg-linear-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+                Development Stack
+            </span>
+        </h1>
 
           <p className="mx-auto mt-4 w-full max-w-md text-sm leading-relaxed text-slate-500 sm:text-base lg:mx-0">
             Explore frontend, backend, database, and tooling options, compare

@@ -1,9 +1,9 @@
 const Footer = () => {
     return (
         <footer className="w-full border-t border-slate-100 bg-white text-slate-600">
-            <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
-                    <div className="lg:col-span-2">
+            <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
+                <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-5 lg:gap-8">
+                    <div className="col-span-2 lg:col-span-2">
                         <div className="flex items-center gap-2">
                             <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-linear-to-tr from-purple-600 to-pink-500 text-xs font-bold text-white">
                                 DS
@@ -16,7 +16,7 @@ const Footer = () => {
                             Curated tools, technologies, and resources for developers building
                             modern software.
                         </p>
-                        <div className="mt-6 flex items-center gap-4 text-xs font-medium text-slate-600">
+                        <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-medium text-slate-600">
                             <a href="#github" className="hover:text-slate-900">GitHub</a>
                             <a href="#twitter" className="hover:text-slate-900">Twitter</a>
                             <a href="#linkedin" className="hover:text-slate-900">LinkedIn</a>
@@ -50,7 +50,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-100 pt-6 text-xs text-slate-400 sm:flex-row">
+                <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-slate-100 pt-6 text-center text-xs text-slate-400 sm:mt-12 sm:flex-row sm:text-left">
                     <p>© 2026 Dev Stack. All rights reserved.</p>
                     <div className="flex gap-4">
                         <a href="#privacy" className="hover:text-slate-600">Privacy</a>

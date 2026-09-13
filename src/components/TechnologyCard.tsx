@@ -30,28 +30,28 @@ const TechnologyCard = ({ tech, isSelected, onToggle }: TechnologyCardProps) => 
   const IconComponent = iconMap[tech.icon];
 
   return (
-    <article className={`flex flex-col justify-between rounded-2xl border bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md ${isSelected ? 'border-orange-300 ring-2 ring-orange-100' : 'border-slate-100'}`}>
+    <article className={`flex min-w-0 flex-col justify-between overflow-hidden rounded-xl border bg-white p-3 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md sm:rounded-2xl sm:p-6 ${isSelected ? 'border-orange-300 ring-2 ring-orange-100' : 'border-slate-100'}`}>
       <div>
         <div className="flex items-center justify-between">
-          <div className="text-3xl">
+          <div className="text-2xl sm:text-3xl">
             {IconComponent && <IconComponent className={tech.iconColor} />}
           </div>
           {tech.badge && (
-            <span className={`rounded-full px-3 py-0.5 text-xs font-medium ${tech.badgeClassName}`}>
+            <span className={`max-w-20 truncate rounded-full px-2 py-0.5 text-[10px] font-medium sm:max-w-none sm:px-3 sm:text-xs ${tech.badgeClassName}`}>
               {tech.badge}
             </span>
           )}
         </div>
 
-        <h3 className="mt-4 text-xl font-bold text-slate-900">{tech.name}</h3>
-        <p className="mt-2 text-xs leading-relaxed text-slate-500">{tech.description}</p>
+        <h3 className="mt-3 wrap-break-word text-base font-bold leading-tight text-slate-900 sm:mt-4 sm:text-xl">{tech.name}</h3>
+        <p className="mt-2 line-clamp-3 text-[11px] leading-relaxed text-slate-500 sm:text-xs">{tech.description}</p>
       </div>
 
-      <div className="mt-6">
-        <div className="mb-4 flex items-center justify-between text-xs text-slate-500">
-          <div className="flex gap-2">
-            <span className="rounded bg-slate-100 px-2 py-0.5 font-medium">{tech.category}</span>
-            <span className="rounded bg-slate-100 px-2 py-0.5 font-medium">{tech.level}</span>
+      <div className="mt-4 sm:mt-6">
+        <div className="mb-3 flex flex-wrap items-center justify-between gap-2 text-[10px] text-slate-500 sm:mb-4 sm:text-xs">
+          <div className="flex min-w-0 flex-wrap gap-1">
+            <span className="max-w-full truncate rounded bg-slate-100 px-1.5 py-0.5 font-medium sm:px-2">{tech.category}</span>
+            <span className="max-w-full truncate rounded bg-slate-100 px-1.5 py-0.5 font-medium sm:px-2">{tech.level}</span>
           </div>
           <div className="flex items-center gap-1 font-semibold text-slate-700">
             <FaStar className="text-xs text-amber-400" />
@@ -63,7 +63,7 @@ const TechnologyCard = ({ tech, isSelected, onToggle }: TechnologyCardProps) => 
           type="button"
           aria-pressed={isSelected}
           onClick={() => onToggle(tech)}
-          className={`w-full rounded-xl py-2.5 text-xs font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 ${
+          className={`w-full rounded-lg py-2 text-[10px] font-semibold leading-tight transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 sm:rounded-xl sm:py-2.5 sm:text-xs ${
             isSelected
               ? "border border-rose-200 bg-rose-50 text-rose-600 hover:bg-rose-100"
               : "bg-slate-950 text-white hover:bg-slate-800"
