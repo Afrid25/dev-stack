@@ -9,7 +9,7 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="border-b border-slate-200 bg-white">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white shadow-sm">
       <nav
         className="relative mx-auto flex min-h-20 max-w-6xl items-center gap-8 px-5 md:px-8"
         aria-label="Main navigation"
