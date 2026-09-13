@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import type { Technology } from "./TypeScript";
 import StackSideBar from "./StackSideBar";
 import TechnologyCard from "./TechnologyCard";
+import toast from 'react-hot-toast'
 
 const TechnologySection = () => {
   const [technologies, setTechnologies] = useState<Technology[]>([]);
@@ -35,17 +36,36 @@ const TechnologySection = () => {
   }, []);
 
   const handleToggleStack = (tech: Technology) => {
-    setSelectedStack((prev) => { 
-      const isSelected = prev.some((item) => item.id === tech.id);
-      return isSelected
-        ? prev.filter((item) => item.id !== tech.id)
-        : [...prev, tech];
-    });
+    const isSelected = selectedStack.some((item) => item.id === tech.id)
+
+    if (isSelected) {
+      toast(`${tech.name} removed from your stack`)
+    } else {
+      toast.success(`${tech.name} added to your stack`)
+    }
+
+    setSelectedStack((previousStack) => (
+      isSelected
+        ? previousStack.filter((item) => item.id !== tech.id)
+        : [...previousStack, tech]
+    ))
   };
 
   const handleRemove = (id: string) => {
-    setSelectedStack((prev) => prev.filter((item) => item.id !== id));
+    const removedTechnology = selectedStack.find((item) => item.id === id)
+    if (removedTechnology) {
+      toast(`${removedTechnology.name} removed from your stack`)
+    }
+
+    setSelectedStack((previousStack) => previousStack.filter((item) => item.id !== id))
   };
+
+  const handleRemoveAll = () => {
+    if (selectedStack.length === 0) return
+
+    setSelectedStack([])
+    toast.success('All technologies removed from your stack')
+  }
 
   return (
     <section
@@ -77,7 +97,11 @@ const TechnologySection = () => {
             ))}
           </div>
 
-          <StackSideBar selectedStack={selectedStack} onRemove={handleRemove} />
+          <StackSideBar
+            selectedStack={selectedStack}
+            onRemove={handleRemove}
+            onRemoveAll={handleRemoveAll}
+          />
         </div>
       </div>
     </section>

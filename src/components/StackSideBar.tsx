@@ -25,9 +25,10 @@ const iconMap: Record<string, ComponentType<{ className?: string }>> = {
 interface StackSideBarProps {
     selectedStack: Technology[]
     onRemove: (id: string) => void
+    onRemoveAll: () => void
 }
 
-const StackSideBar = ({ selectedStack, onRemove }: StackSideBarProps) => {
+const StackSideBar = ({ selectedStack, onRemove, onRemoveAll }: StackSideBarProps) => {
     return (
         <aside className="sticky top-6 rounded-2xl border border-slate-100 bg-white p-5 shadow-sm">
             <h3 className="font-bold text-slate-900">Your Stack</h3>
@@ -55,6 +56,16 @@ const StackSideBar = ({ selectedStack, onRemove }: StackSideBarProps) => {
                     </ul>
                 )}
             </div>
+
+            {selectedStack.length > 0 && (
+                <button
+                    type="button"
+                    onClick={onRemoveAll}
+                    className="mt-4 w-full rounded-lg border border-rose-200 py-2 text-xs font-semibold text-rose-500 transition-colors hover:bg-rose-50 hover:text-rose-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-500"
+                >
+                    Remove all
+                </button>
+            )}
         </aside>
     )
 }
