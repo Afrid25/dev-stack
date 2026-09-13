@@ -14,7 +14,7 @@ const NavBar = () => {
         className="relative mx-auto flex min-h-20 max-w-6xl items-center gap-8 px-5 md:px-8"
         aria-label="Main navigation"
       >
-        <NavLogo /> // Logo part
+        <NavLogo /> 
 
         {/*  Nav Items */}
         <div className="absolute left-1/2 hidden -translate-x-1/2 md:block">
