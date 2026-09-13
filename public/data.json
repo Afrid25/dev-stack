@@ -1,0 +1,126 @@
+[
+  {
+    "id": "react",
+    "name": "React",
+    "category": "Frontend",
+    "level": "Beginner-Friendly",
+    "rating": 4.8,
+    "description": "Build flexible interfaces from small, reusable components.",
+    "badge": "Popular",
+    "badgeClassName": "bg-cyan-50 text-cyan-700",
+    "icon": "FaReact",
+    "iconColor": "text-cyan-500"
+  },
+  {
+    "id": "vue",
+    "name": "Vue",
+    "category": "Frontend",
+    "level": "Beginner-Friendly",
+    "rating": 4.6,
+    "description": "Create approachable interfaces with a progressive framework.",
+    "icon": "FaVuejs",
+    "iconColor": "text-emerald-500"
+  },
+  {
+    "id": "svelte",
+    "name": "Svelte",
+    "category": "Frontend",
+    "level": "Intermediate",
+    "rating": 4.5,
+    "description": "Build fast web experiences with a compiler-first approach.",
+    "icon": "SiSvelte",
+    "iconColor": "text-orange-500"
+  },
+  {
+    "id": "nextjs",
+    "name": "Next.js",
+    "category": "Frontend",
+    "level": "Intermediate",
+    "rating": 4.7,
+    "description": "Add routing, rendering, and full-stack features to React.",
+    "badge": "Full-stack",
+    "badgeClassName": "bg-slate-100 text-slate-700",
+    "icon": "TbBrandNextjs",
+    "iconColor": "text-slate-900"
+  },
+  {
+    "id": "nodejs",
+    "name": "Node.js",
+    "category": "Backend",
+    "level": "Beginner-Friendly",
+    "rating": 4.7,
+    "description": "Create server-side applications with JavaScript.",
+    "icon": "FaNodeJs",
+    "iconColor": "text-green-600"
+  },
+  {
+    "id": "postgresql",
+    "name": "PostgreSQL",
+    "category": "Database",
+    "level": "Intermediate",
+    "rating": 4.8,
+    "description": "Store structured application data with reliable SQL.",
+    "icon": "BiLogoPostgresql",
+    "iconColor": "text-blue-600"
+  },
+  {
+    "id": "redis",
+    "name": "Redis",
+    "category": "Database",
+    "level": "Intermediate",
+    "rating": 4.5,
+    "description": "Add fast in-memory storage and caching to your stack.",
+    "icon": "SiRedis",
+    "iconColor": "text-red-500"
+  },
+  {
+    "id": "javascript",
+    "name": "JavaScript",
+    "category": "Language",
+    "level": "Beginner-Friendly",
+    "rating": 4.9,
+    "description": "Use the language that powers the modern web.",
+    "icon": "SiJavascript",
+    "iconColor": "text-yellow-500"
+  },
+  {
+    "id": "typescript",
+    "name": "TypeScript",
+    "category": "Language",
+    "level": "Intermediate",
+    "rating": 4.9,
+    "description": "Scale JavaScript projects with dependable types.",
+    "icon": "SiTypescript",
+    "iconColor": "text-blue-500"
+  },
+  {
+    "id": "tailwindcss",
+    "name": "Tailwind CSS",
+    "category": "Styling",
+    "level": "Beginner-Friendly",
+    "rating": 4.8,
+    "description": "Style interfaces quickly with composable utility classes.",
+    "icon": "SiTailwindcss",
+    "iconColor": "text-sky-500"
+  },
+  {
+    "id": "java",
+    "name": "Java",
+    "category": "Backend",
+    "level": "Intermediate",
+    "rating": 4.4,
+    "description": "Build robust backend services for larger systems.",
+    "icon": "FaJava",
+    "iconColor": "text-red-600"
+  },
+  {
+    "id": "docker",
+    "name": "Docker",
+    "category": "DevOps",
+    "level": "Intermediate",
+    "rating": 4.7,
+    "description": "Package applications so they run consistently anywhere.",
+    "icon": "FaDocker",
+    "iconColor": "text-sky-600"
+  }
+]

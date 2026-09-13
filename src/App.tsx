@@ -1,6 +1,8 @@
 import './App.css'
 import NavBar from './components/Navbar/NavBar'
 import Hero from './components/Hero'
+import TechnologySection from './components/TechnologySection'
+import Footer from './components/Footer'
 
 function App() {
  
@@ -9,7 +11,8 @@ function App() {
     <>
       <NavBar />
       <Hero />
-      <footer />
+      <TechnologySection />
+      <Footer />
     </>
   )
 }
