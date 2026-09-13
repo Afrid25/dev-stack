@@ -72,7 +72,7 @@ const TechnologySection = () => {
       id="technology"
       className="bg-slate-50/50 px-4 py-16 sm:px-6 lg:px-8"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-6xl">
         <header className="mb-10">
           <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
             Explore the{" "}
