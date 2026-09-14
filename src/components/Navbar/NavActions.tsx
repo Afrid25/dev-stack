@@ -2,13 +2,13 @@ const NavActions = () => {
     return (
         <div className="flex items-center gap-5">
             <a
-                className="text-sm font-medium text-slate-600 transition-colors hover:text-emerald-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-700"
+                className="inline bg-linear-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-sm font-semibold text-transparent transition-opacity hover:opacity-80 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink-500"
                 href="#sign-in"
             >
                 Sign in
             </a>
             <a
-                className="rounded-md bg-emerald-700 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-emerald-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-700"
+                className="rounded-md bg-linear-to-r from-orange-500 via-pink-500 to-purple-600 px-4 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-85 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink-500"
                 href="#sign-up"
             >
                 Sign up
